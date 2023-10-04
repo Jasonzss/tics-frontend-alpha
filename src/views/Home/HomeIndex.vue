@@ -1,3 +1,3 @@
 <template>
-    <div>Home组件</div>
+    <img src="@/assets/images/225471.jpg"/>
 </template>
