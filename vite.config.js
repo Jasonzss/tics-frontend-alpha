@@ -18,7 +18,7 @@ export default defineConfig({
     }),
     Components({
       resolvers: [
-        // 启用sass用作自定义主题色
+        // 启用sass配置自定义主题色
         ElementPlusResolver({ importStyle: "sass" })
       ],
     }),
@@ -32,6 +32,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
+        //自动导入定制化样式文件进行样式覆盖
         additionalData: `
           @use "@/styles/element/index.scss" as *;
         `,
