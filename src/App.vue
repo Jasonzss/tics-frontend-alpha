@@ -38,6 +38,9 @@
     <el-button type="warning" :icon="Star" circle />
     <el-button type="danger" :icon="Delete" circle />
   </el-row>
+  <br/>
+  <!-- 一级路由组件 -->
+  <RouterView/>
 </template>
 
 <script lang="ts" setup>
