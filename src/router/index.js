@@ -1,15 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import LoginPanel from '@/views/Login/login-index.vue'
-import IndexPanel from '@/views/Layout/layout-index.vue'
-import Home from '@/views/Home/home-index.vue'
-import Category from '@/views/Category/category-index.vue'
+import LoginIndex from '@/views/Login/LoginIndex.vue'
+import LayoutIndex from '@/views/Layout/LayoutIndex.vue'
+import Home from '@/views/Home/HomeIndex.vue'
+import Category from '@/views/Category/CategoryIndex.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  
   routes: [
     {
       path: '/',
-      component: IndexPanel,
+      component: LayoutIndex,
       children: [
         {
           path: '',
@@ -23,7 +24,7 @@ const router = createRouter({
     },
     {
       path: '/login',
-      component: LoginPanel
+      component: LoginIndex
     },
   ]
 })
