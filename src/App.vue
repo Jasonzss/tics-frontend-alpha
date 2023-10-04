@@ -41,7 +41,16 @@
   <br/>
   <!-- 一级路由组件 -->
   <RouterView/>
+  <div class="test">
+    test var scss
+  </div>
 </template>
+
+<style scoped lang="scss">
+  .test {
+    color: $priceColor;
+  }
+</style>
 
 <script lang="ts" setup>
 import {
