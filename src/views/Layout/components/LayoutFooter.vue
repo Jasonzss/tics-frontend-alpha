@@ -11,11 +11,11 @@
         <dl>
           <dt>关注我们</dt>
           <dd><i class="iconfont icon-weixin"></i> 公众号</dd>
-          <dd><i class="iconfont icon-weibo"></i> 微博</dd>
+          <dd><i class="iconfont icon-bilibili"></i> bilibili</dd>
         </dl>
         <dl>
           <dt>下载APP</dt>
-          <dd class="qrcode"><img src="@/assets/images/qrcode.jpg" /></dd>
+          <dd class="qrcode"><img src="@/assets/images/QRCode.png" /></dd>
           <dd class="download">
             <span>扫描二维码</span>
             <span>立马下载APP</span>
@@ -24,7 +24,7 @@
         </dl>
         <dl>
           <dt>服务热线</dt>
-          <dd class="hotline">400-0000-000 <small>周一至周日 8:00-18:00</small></dd>
+          <dd class="hotline">184-7938-5003 <small>周一至周日 8:00-18:00</small></dd>
         </dl>
       </div>
     </div>
@@ -33,16 +33,8 @@
       <div class="container">
         <div class="slogan">
           <a href="javascript:;">
-            <i class="iconfont icon-footer01"></i>
-            <span>价格亲民</span>
-          </a>
-          <a href="javascript:;">
-            <i class="iconfont icon-footer02"></i>
-            <span>物流快捷</span>
-          </a>
-          <a href="javascript:;">
-            <i class="iconfont icon-footer03"></i>
-            <span>品质新鲜</span>
+            <i class="iconfont icon-book"></i>
+            <span>学习从未如此Free</span>
           </a>
         </div>
         <!-- 版权信息 -->
@@ -50,13 +42,12 @@
           <p>
             <a href="javascript:;">关于我们</a>
             <a href="javascript:;">帮助中心</a>
-            <a href="javascript:;">售后服务</a>
-            <a href="javascript:;">配送与验收</a>
+            <a href="javascript:;">加入我们</a>
             <a href="javascript:;">商务合作</a>
             <a href="javascript:;">搜索推荐</a>
             <a href="javascript:;">友情链接</a>
           </p>
-          <p>CopyRight © 小兔鲜儿</p>
+          <p>CopyRight © Thinking-in-Contexts</p>
         </div>
       </div>
     </div>
@@ -179,7 +170,7 @@
     padding: 60px 100px;
     border-bottom: 1px solid #434343;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
     a {
       height: 58px;
