@@ -1,0 +1,2 @@
+// 启动vscode代码热更新
+npx vite --port=4000
