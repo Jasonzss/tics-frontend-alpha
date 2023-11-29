@@ -1,13 +1,15 @@
 <script setup>
-    import LeftPanel from './components/LeftPanel.vue';
     import MainPanel from './components/MainPanel.vue';
-    import RightPanel from './components/RightPanel.vue';
+    import ToolIndex from '../Tool/ToolIndex.vue';
+    import ContextIndex from '../Context/ContextIndex.vue';
+    import Hotspot from '../Hotspot/HotspotIndex.vue'
 </script>
 <template>
     <div class="main-container">
-        <LeftPanel class="left-panel"/>
+        <ToolIndex/>
+        <Hotspot/>
         <MainPanel class="main-panel"/>
-        <RightPanel class="right-panel"/>
+        <ContextIndex/>
     </div>
 
 </template>

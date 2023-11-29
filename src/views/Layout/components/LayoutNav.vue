@@ -1,8 +1,13 @@
 <script setup>
+  const properties = defineProps({
+    //父组件传进来的参数
+    uid: Number
+})
 
-</script>
-<script lang="ts" setup>
-  import { ArrowDown } from '@element-plus/icons-vue'
+const myspace = "/userspace/"+properties.uid
+const myWordSpace = "/user/"+properties.uid+"/word"
+const myCommunities = "/user/"+properties.uid+"/communities"
+const myCreatorSpace = "/user/"+properties.uid+"/creator"
 
 </script>
 <template>
@@ -30,16 +35,17 @@
                 
                 <template #dropdown>
                   <el-dropdown-menu>
-                    <el-dropdown-item>个人主页</el-dropdown-item>
-                    <el-dropdown-item>我的社区</el-dropdown-item>
-                    <el-dropdown-item>创作空间</el-dropdown-item>
+                    <el-dropdown-item><RouterLink :to=myspace>个人主页</RouterLink></el-dropdown-item>
+                    <el-dropdown-item><RouterLink :to=myCommunities>我的社区</RouterLink></el-dropdown-item>
+                    <el-dropdown-item><RouterLink :to=myCreatorSpace>创作空间</RouterLink></el-dropdown-item>
                   </el-dropdown-menu>
                 </template>
               </el-dropdown>
             </div>
           </li>
           <li><a href="javascript:;">AI-Talk</a></li>
-          <li><a href="javascript:;">背单词</a></li>
+          <li><a href="javascript:;">积分商城</a></li>
+          <li><RouterLink :to=myWordSpace>背单词</RouterLink></li>
         </template>
         <template v-else>
           <li><a href="javascript:;" @click="$router.push('/login')">请先登录</a></li>

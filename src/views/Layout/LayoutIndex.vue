@@ -4,9 +4,10 @@
 </script>
 
 <template>
-    <div>
+    <div class="layout-index">
         <LayoutNav/>
         <RouterView/>
         <LayoutFooter/>
     </div>
 </template>
+
