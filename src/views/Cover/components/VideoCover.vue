@@ -7,8 +7,10 @@ const properties = defineProps({
     id: String
 })
 
-import DPlayer from 'dplayer';
+//import VideoPlayer from '@/views/Video/Components/VideoPlayer.vue'
+
 import { onMounted } from 'vue'
+import DPlayer from 'dplayer'
 
 onMounted(() => {
     new DPlayer({
@@ -40,17 +42,15 @@ onMounted(() => {
     ],
 });
 })
-
-
 </script>
 
 <template>
     <div class="video-player-container">
-        <div class="container-above-video">
+        <div class="container-above-video" @mouseup="$router.push('/video/'+properties.id)">
             <div class="video-title">{{ properties.title }}</div>
         </div>
         <div :id=properties.id class="dplayer"></div>
-        <div class="container-under-video">
+        <div class="container-under-video" @mouseup="$router.push('/video/'+properties.id)">
             <div class="video-desc">{{ properties.essay }}</div>
         </div>
     </div>
@@ -76,7 +76,7 @@ onMounted(() => {
                 font-size: 20px;
             }
         }
-
+        
         .dplayer{
             margin: 2px 7px 10px 15px;
             width: 95%;

@@ -5,23 +5,25 @@
         cover: String,
         title: String
     })
+
+    const id = 'id'
 </script>
 
 <template>
-    <div class="text-cover">
+    <div class="essay-cover" @mouseup="$router.push('/essay/'+id)">
         <div class="cover-img">
             <img :src=properties.cover>
         </div>
         <div class="cover-content">
             <div class="cover-title">{{ properties.title }}</div>
-            <div class="text-essay">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ properties.essay }}</div>
+            <div class="essay-content">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ properties.essay }}</div>
         </div>
     </div>
 
 </template>
 
 <style lang="scss">
-    .text-cover{
+    .essay-cover{
         display: flex;
         align-items: flex-start;
 
@@ -42,7 +44,7 @@
                 font-weight: bold;
             }
             
-            .text-essay{
+            .essay-content{
                 margin-top: 5px;
             }
         }

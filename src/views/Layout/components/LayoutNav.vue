@@ -5,7 +5,6 @@
 })
 
 const myspace = "/userspace/"+properties.uid
-const myWordSpace = "/user/"+properties.uid+"/word"
 const myCommunities = "/user/"+properties.uid+"/communities"
 const myCreatorSpace = "/user/"+properties.uid+"/creator"
 
@@ -45,7 +44,7 @@ const myCreatorSpace = "/user/"+properties.uid+"/creator"
           </li>
           <li><a href="javascript:;">AI-Talk</a></li>
           <li><a href="javascript:;">积分商城</a></li>
-          <li><RouterLink :to=myWordSpace>背单词</RouterLink></li>
+          <li><RouterLink to='/learninghub'>背单词</RouterLink></li>
         </template>
         <template v-else>
           <li><a href="javascript:;" @click="$router.push('/login')">请先登录</a></li>

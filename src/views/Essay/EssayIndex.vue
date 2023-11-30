@@ -1,20 +1,14 @@
 <script setup>
     import ContentOperations from '@/views/Components/ContentOperations.vue'
-
-    import { useRoute } from 'vue-router'
-    const id = useRoute().params.id
-    console.log(id)
-
-    const url = 'http://localhost:4000/src/assets/audio/GrazeTheRoof.mp3'
 </script>
 
 <template>
-    <div class="audio">
-        <div class="audio-header">
-            <div class="audio-title">audio-title</div>
-            <div class="audio-info">
-                <div class="audio-upload-time">上传的时间</div>
-                <div class="audio-feedback">
+    <div class="essay">
+        <div class="essay-header">
+            <div class="essay-title">essay-title</div>
+            <div class="essay-info">
+                <div class="essay-upload-time">上传的时间</div>
+                <div class="essay-feedback">
                     <div class="feedback-item">浏览量</div>
                     <div class="feedback-item">点赞</div>
                     <div class="feedback-item">喜欢</div>
@@ -37,16 +31,10 @@
             </div>
         </div>
         <ContentOperations/>
-        <main class="audio-main-pannel">
-            <div class="cover-img">cover-img</div>
-            <audio controls>
-                <source :src=url type="audio/mpeg">
-            </audio>
+        <main class="essay-main">
+            内容
         </main>
-        <div class="container-under-audio">
-            <div class="intro">
-                简介
-            </div>
+        <div class="container-under-essay">
             <div class="content-tags">
                 <div class="content-tag">tag</div>
                 <div class="content-tag">tag</div>
@@ -54,33 +42,32 @@
                 <div class="content-tag">tag</div>
             </div>
         </div>
-        <div class="related-recommend">
-            相关推荐
-        </div>
         <div class="comment-area">
-            评论区
+
         </div>
     </div>
 </template>
 
 <style lang="scss">
-    .audio{
+    .essay{
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        .audio-header{
-            border: solid green 2px;
-            height: 200px;
+        .essay-header{
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
             width: 50%;
+            border: solid red 2px;
 
-            .audio-title{
+            .essay-title{
                 font-size: 40px;
                 font-weight: bold;
                 border: solid rgb(0, 255, 34) 2px;
             }
 
-            .audio-info{
+            .essay-info{
                 display: flex;
                 border: solid rgb(98, 0, 255) 2px;
                 align-items: center;
@@ -89,12 +76,12 @@
                     font-size: 12px;
                 }
 
-                .audio-upload-time{
+                .essay-upload-time{
                     border: solid rgb(0, 255, 0) 2px;
                     margin-right: 20px;
                 }
 
-                .audio-feedback{
+                .essay-feedback{
                     display: flex;
                     border: solid rgb(0, 255, 0) 2px;
                     margin-right: 20px;
@@ -129,40 +116,29 @@
             }
         }
 
-        .audio-main-pannel{
+        .essay-main{
+            height: 500px;
             width: 50%;
-            height: 400px;
-            border: solid rgb(0, 255, 149) 2px;
+            border: solid red 2px;
         }
 
-        .container-under-audio{
+        .container-under-essay{
             width: 50%;
-            height: 100px;
-            
-            .intro{
-                border: solid red 2px;
-                height: 50px;
-            }
-
+            border: solid red 2px;
             .content-tags{
-                border: solid red 2px;
                 display: flex;
 
                 .content-tag{
-                    margin: 15px;
+                    margin: 12px;
                 }
             }
         }
 
-        .related-recommend{
-            width: 50%;
-            height: 400px;
-            border: solid rgb(136, 255, 0) 2px;
-        }
-
         .comment-area{
+            width: 50%;
+            border: solid red 2px;
+            height: 400px;
             display: none;
         }
-
     }
 </style>

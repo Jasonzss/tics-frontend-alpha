@@ -4,7 +4,6 @@ import LayoutIndex from '@/views/Layout/LayoutIndex.vue'
 import Home from '@/views/Home/HomeIndex.vue'
 import Category from '@/views/Category/CategoryIndex.vue'
 import UserSpaceIndexVue from '@/views/User/UserSpaceIndex.vue'
-import WordIndexVue from '@/views/Word/WordIndex.vue'
 import DictionaryIndexVue from '@/views/Dictionary/DictionaryIndex.vue'
 import CommunitiesIndex from '@/views/Communities/CommunitiesIndex.vue'
 import CommunityIndex from '@/views/Community/CommunityIndex.vue'
@@ -14,6 +13,12 @@ import UserSpaceHome from '@/views/User/components/UserSpaceHome.vue'
 import UserSpaceCreation from '@/views/User/components/UserSpaceCreation.vue'
 import UserSpaceFavlist from '@/views/User/components/UserSpaceFavlist.vue'
 import UserSpaceComment from '@/views/User/components/UserSpaceComment.vue'
+import LearningHubIndex from '@/views/LearningHub/LearningHubIndex.vue'
+import VideoIndex from '@/views/Video/VideoIndex.vue'
+import AudioIndex from '@/views/Audio/AudioIndex.vue'
+import EssayIndex from '@/views/Essay/EssayIndex.vue'
+import ExerciseIndex from '@/views/Exercise/ExerciseIndex.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -63,11 +68,7 @@ const router = createRouter({
           component: CreatorIndex
         },
         {
-          path: 'user/:uid/word',
-          component: WordIndexVue
-        },
-        {
-          path: 'dictionary/:target',
+          path: 'dictionary/:word',
           component: DictionaryIndexVue
         },
         {
@@ -77,6 +78,26 @@ const router = createRouter({
         {
           path: 'community',
           component: CommunityIndex
+        },
+        {
+          path: 'video/:id',
+          component: VideoIndex
+        },
+        {
+          path: 'audio/:id',
+          component: AudioIndex
+        },
+        {
+          path: 'essay/:id',
+          component: EssayIndex
+        },
+        {
+          path: 'learninghub',
+          component: LearningHubIndex
+        },
+        {
+          path: 'exercise/word',
+          component: ExerciseIndex
         },
       ]
     },

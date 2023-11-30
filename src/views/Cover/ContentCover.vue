@@ -12,7 +12,7 @@
     var contentIntroData  = await getContentsIntro(properties.id)
     console.log(contentIntroData)
 
-    import TextCover from '@/views/Cover/components/TextCover.vue';
+    import EssayCover from '@/views/Cover/components/EssayCover.vue';
     import AudioCover from '@/views/Cover/components/AudioCover.vue';
     import VideoCover from '@/views/Cover/components/VideoCover.vue';
 </script>
@@ -31,7 +31,7 @@
         </div>
         <div class="content-cover-main">
             <div v-if="0 === contentIntroData.type">
-                <TextCover :cover=contentIntroData.cover :essay=contentIntroData.intro :title=contentIntroData.title />
+                <EssayCover :cover=contentIntroData.cover :essay=contentIntroData.intro :title=contentIntroData.title />
             </div>
             <div v-else-if="1 === contentIntroData.type" >
                 <AudioCover :essay=contentIntroData.intro :title=contentIntroData.title :audio=contentIntroData.audio :id=contentIntroData.id />

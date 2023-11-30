@@ -10,7 +10,7 @@ const properties = defineProps({
 </script>
 
 <template>
-    <div :id=properties.id class="audio-player">
+    <div :id=properties.id class="audio-player" @mouseup="$router.push('/audio/'+properties.id)">
         <div class="container-above-audio">
             <span class="audio-title">{{ properties.title }}</span>
             <span>{{ properties.essay }}</span>
