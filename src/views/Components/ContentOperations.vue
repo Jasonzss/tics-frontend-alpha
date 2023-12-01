@@ -4,6 +4,7 @@
 
 <template>
     <div class="content-operations">
+        <div class="content-operation">top</div>
         <div class="content-operation">喜欢</div>
         <div class="content-operation">点赞</div>
         <div class="content-operation">收藏</div>

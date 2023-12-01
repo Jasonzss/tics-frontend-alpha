@@ -17,7 +17,7 @@ const myCreatorSpace = "/user/"+properties.uid+"/creator"
     </div>
     <div class="mid-container">
       <input type="text" placeholder="搜一搜">
-      <i class="iconfont icon-search"></i>
+      <i class="iconfont icon-search" @click="$router.push('/search')"></i>
     </div>
     <div class="right-container">
       <ul>
@@ -43,7 +43,8 @@ const myCreatorSpace = "/user/"+properties.uid+"/creator"
             </div>
           </li>
           <li><a href="javascript:;">AI-Talk</a></li>
-          <li><a href="javascript:;">积分商城</a></li>
+          <li><RouterLink to='/message'>消息</RouterLink></li>
+          <li><RouterLink to='/store'>积分商城</RouterLink></li>
           <li><RouterLink to='/learninghub'>背单词</RouterLink></li>
         </template>
         <template v-else>

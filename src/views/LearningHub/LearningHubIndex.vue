@@ -74,7 +74,7 @@
 
         .weekly-learning{
             height: 300px;
-            width: 60%;
+            width: 50%;
             border: solid rgb(255, 0, 21) 2px;
             display: flex;
             flex-direction: column;
@@ -95,7 +95,7 @@
         }
 
         .learning-operation{
-            width: 60%;
+            width: 50%;
             border: solid rgb(0, 255, 98) 2px;
             padding: 20px;
             display: flex;
@@ -112,7 +112,7 @@
         }
 
         .learning-progress{
-            width: 60%;
+            width: 50%;
             border: solid rgb(0, 26, 255) 2px;
             padding: 20px;
             display: flex;
@@ -139,7 +139,7 @@
         }
 
         .unable-memorize-top20{
-            width: 60%;
+            width: 50%;
             border: solid rgb(0, 26, 255) 2px;
             padding: 20px;
             display: flex;

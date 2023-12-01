@@ -35,7 +35,7 @@
         flex-direction: column;
 
         .user-banner{
-            width: 70%;
+            width: 50%;
             height: 150px;
             border: 2px solid #00b43b;
         }
@@ -43,7 +43,7 @@
         .user-info{
             display: flex;
             border: 2px solid #0039b4;
-            width: 70%;
+            width: 50%;
 
             .userspace-avatar{
                 img{
@@ -55,7 +55,7 @@
         .userspace-main{
             display: flex;
             border: 2px solid #8db400;
-            width: 70%;
+            width: 50%;
             flex-direction: column;
 
             .userspace-header{

@@ -24,7 +24,7 @@
         align-items: center;
 
         .my-communities{
-            width: 60%;
+            width: 50%;
             height: 620px;
             border: rgb(0, 81, 255) solid 2px;
         }
@@ -33,7 +33,7 @@
             display: flex;  
             flex-direction: column;
             align-items: center;
-            width: 60%;
+            width: 50%;
             height: 1000px;
             border: rgb(0, 255, 106) solid 2px;
 

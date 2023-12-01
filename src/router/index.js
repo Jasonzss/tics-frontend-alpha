@@ -18,6 +18,10 @@ import VideoIndex from '@/views/Video/VideoIndex.vue'
 import AudioIndex from '@/views/Audio/AudioIndex.vue'
 import EssayIndex from '@/views/Essay/EssayIndex.vue'
 import ExerciseIndex from '@/views/Exercise/ExerciseIndex.vue'
+import StoreIndexVue from '@/views/Store/StoreIndex.vue'
+import MessageIndexVue from '@/views/Message/MessageIndex.vue'
+import LearningLayoutVue from '@/views/LearningLayout/LearningLayoutIndex.vue'
+import SearchIndexVue from '@/views/Search/SearchIndex.vue'
 
 
 const router = createRouter({
@@ -30,75 +34,93 @@ const router = createRouter({
       children: [
         {
           path: '',
-          component: Home
-        },
-        {
-          path:'category',
-          component: Category
-        },
-        {
-          path: 'userspace/:uid',
-          component: UserSpaceIndexVue,
-          props: true,
+          component: LearningLayoutVue,
           children: [
             {
               path: '',
-              component: UserSpaceHome
+              component: Home
             },
             {
-              path: 'creation',
-              component: UserSpaceCreation
+              path:'category',
+              component: Category
             },
             {
-              path: 'favlist',
-              component: UserSpaceFavlist
+              path: 'userspace/:uid',
+              component: UserSpaceIndexVue,
+              props: true,
+              children: [
+                {
+                  path: '',
+                  component: UserSpaceHome
+                },
+                {
+                  path: 'creation',
+                  component: UserSpaceCreation
+                },
+                {
+                  path: 'favlist',
+                  component: UserSpaceFavlist
+                },
+                {
+                  path: 'comment',
+                  component: UserSpaceComment
+                },
+              ]
             },
             {
-              path: 'comment',
-              component: UserSpaceComment
+              path: 'user/:uid/communities',
+              component: CommunitiesIndex
+            },
+            {
+              path: 'user/:uid/creator',
+              component: CreatorIndex
+            },
+            {
+              path: 'dictionary/:word',
+              component: DictionaryIndexVue
+            },
+            {
+              path: 'developing',
+              component: DevelopingIndex
+            },
+            {
+              path: 'community',
+              component: CommunityIndex
+            },
+            {
+              path: 'video/:id',
+              component: VideoIndex
+            },
+            {
+              path: 'audio/:id',
+              component: AudioIndex
+            },
+            {
+              path: 'essay/:id',
+              component: EssayIndex
+            },
+            {
+              path: 'learninghub',
+              component: LearningHubIndex
+            },
+            {
+              path: 'exercise/word',
+              component: ExerciseIndex
+            },
+            {
+              path: 'store',
+              component: StoreIndexVue
+            },
+            {
+              path: 'message',
+              component: MessageIndexVue
+            },
+            {
+              path: 'search',
+              component: SearchIndexVue
             },
           ]
-        },
-        {
-          path: 'user/:uid/communities',
-          component: CommunitiesIndex
-        },
-        {
-          path: 'user/:uid/creator',
-          component: CreatorIndex
-        },
-        {
-          path: 'dictionary/:word',
-          component: DictionaryIndexVue
-        },
-        {
-          path: 'developing',
-          component: DevelopingIndex
-        },
-        {
-          path: 'community',
-          component: CommunityIndex
-        },
-        {
-          path: 'video/:id',
-          component: VideoIndex
-        },
-        {
-          path: 'audio/:id',
-          component: AudioIndex
-        },
-        {
-          path: 'essay/:id',
-          component: EssayIndex
-        },
-        {
-          path: 'learninghub',
-          component: LearningHubIndex
-        },
-        {
-          path: 'exercise/word',
-          component: ExerciseIndex
-        },
+        }
       ]
     },
     {

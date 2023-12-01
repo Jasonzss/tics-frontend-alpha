@@ -2,6 +2,7 @@
     import { useRecommandIdsStore } from '../../../stores/recommand.js'
     import { storeToRefs } from 'pinia'
     import ContentCover from '@/views/Cover/ContentCover.vue';
+    import Hotspot from '../../Hotspot/HotspotIndex.vue'
 
     const recommandIdsStore = useRecommandIdsStore()
     
@@ -13,10 +14,14 @@
 
 <template>
     <div class="main-panel-container">
+        <div class="slides-show">
+            轮播图            
+        </div>
         <!-- 此标签用于解决异步方法问题 -->
         <Suspense>
             <ContentCover v-for="id in idArray" :key="id" :id="id"/>
         </Suspense>
+        <Hotspot/>
     </div>
 </template>
 
@@ -24,5 +29,10 @@
     .main-panel-container{
         display:flex;
         flex-direction: column;
+
+        .slides-show{
+            height: 300px;
+            border: solid red 2px;
+        }
     }
 </style>
